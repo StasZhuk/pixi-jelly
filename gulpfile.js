@@ -31,14 +31,14 @@ $.gulp.task('default', $.gulp.series(
     'sass',
     'pug',
     'change:url',
-    'js:foundation',
-    'js:process',
-    // 'webpack',
+    // 'js:foundation',
+    // 'js:process',
+    'webpack',
     'copy:image',
     'copy:font',
     'css:foundation',
     'sprite:svg',
-    'sprite:png'
+    // 'sprite:png'
    
   ),
   $.gulp.parallel(
