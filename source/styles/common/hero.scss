@@ -1,0 +1,35 @@
+$hero-bg-c:#15171b;
+$hero-bg-i: url('../img/hero/hero-shape-bg.png');
+$hero-bg-s: 100%;
+$hero-bg-p: top right;
+$hero-bg-r: no-repeat;
+
+.hero {
+    height: 100vh;
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: $hero-bg-c;
+    background-image: $hero-bg-i;
+    background-size: $hero-bg-s;
+    background-position: $hero-bg-p;
+    background-repeat: $hero-bg-r;
+
+}
+
+.js-index-slider {
+    max-width: 900px;
+    height: 80%;
+    overflow: hidden;
+
+    .index-slider__item {
+        position: relative;
+        height: 100vh;
+    }
+
+    img {
+        position: relative;
+        margin: 0 auto;
+    }
+}   

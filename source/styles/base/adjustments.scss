@@ -1,0 +1,181 @@
+
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+}
+
+html {
+    line-height: 1;
+    font-size: 62.5%;
+    box-sizing: border-box;
+    color: $text-color_main;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: $main-font;
+    background-color: $body-bg;
+    @include desktop() {
+        font-size: 1.5rem;
+    }
+    @include laptop() {
+        font-size: 1.4rem;
+    }
+    @include phone() {
+        font-size: 1.3rem;
+    }
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    color: $link-color;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+input,
+select,
+button {
+    outline: none;
+    border: none;
+}
+
+textarea {
+    resize: none;
+}
+
+audio,
+video,
+canvas,
+iframe,
+img,
+svg {
+    vertical-align: middle;
+}
+
+section {
+    position: relative;
+}
+
+.section {
+    padding: 0px;
+}
+
+.container {
+    @include wrapper();
+    position: relative;
+    max-width: $containerMaxWidth;
+    width: 100%;
+    margin: 0 auto;
+
+    &-flex {
+        @extend .container;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.row {
+    @include row-flex();
+}
+
+.logo-brand {
+    width: $logo-width;
+    height: auto;
+
+    &__wrap {
+        max-width: $logo-width;
+        max-height: $logo-height;
+    }
+}
+
+.btn {
+    border: 1px solid $btn-bc;
+    font-size: $btn-fs;
+    color: $btn-c;
+    background-color: transparent;
+    padding: 10px 40px;
+    transition: 0.3s color ease-in, 0.3s background-color ease-in, 0.3s border-color ease-in;
+    text-transform: uppercase;
+    cursor: pointer;
+    
+    &--round {
+        border-radius: 20px;
+    }
+
+    &:hover {
+        background-color: $acsent;
+        color: #000;
+        border-color: transparent;
+    }
+}
+
+.heading {
+    &-main {
+        font-size: $fs-heading-main;
+        color: #fff;
+    }
+}
+
+.justify {
+    &-end {
+        justify-content: flex-end;
+    }
+
+    &-start {
+        justify-content: flex-start;
+    }
+
+    &-center {
+        justify-content: center;
+    }
+
+    &-sb {
+        justify-content: space-between;
+    }
+
+    &-sa {
+        justify-content: space-around;
+    }
+}
+
+.align {
+    &-center {
+        align-items: center;
+    }
+
+    &-start {
+        align-items: start;
+    }
+    
+    &-end {
+        align-items: end;
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "slide1" : {
+        "title" : {
+            "line1" : "Чугунная"
+        },
+        "image" : "phone.png"
+    },
+    "slide2" : {
+        "title" : {
+            "line1" : "Чугунная"
+        },
+        "image" : "phone.png"
+    },
+    "slide3" : {
+        "title" : {
+            "line1" : "Чугунная"
+        },
+        "image" : "phone.png"
+    }
+}

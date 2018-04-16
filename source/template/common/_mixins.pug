@@ -1,19 +1,34 @@
 //- nav menu mixin
-mixin nav (className, items, activeItem)
-    #{className}(class=`${className} ${className}__main` id=`main-${className}`)
-            ul(class=`${className}__list list`)
+mixin nav (className, items, activeItem, mod)
+    - mod = `nav--${mod}` || ''
+    nav(class=`nav nav-${className} ${mod}` id=`nav-${className}`)
+            ul(class=`nav-${className}__list nav__list`)
                 each href, title in items
                     if (title == activeItem) 
-                        li.nav__list-item.list__item
-                            span(href= href).nav__list-link.active
+                        li(class=`nav-${className}__list-item nav__list-item`)
+                            span(class=`$nav-${className}__list-link nav__list-link active`)
                                 span= title
                     else
-                        li.nav__list-item.list__item
-                            a(href= href).nav__list-link
-                                span(class=`${className}__list-noactive`)= title
+                        li(class=`nav-${className}__list-item nav__list-item`)
+                            a(href= href class=`nav-${className}__list-link nav__list-link`)
+                                span= title
 
 //- icon SVG mixin
 mixin icon(name, mod)
     - mod = mod || ''
     svg(class="icon icon-" + name + ' ' + mod)
         use(xlink:href="/assets/img/sprite/sprite.svg#" + name)
+
+//- logo mixin
+mixin logo-brand(mod, path)
+    - mod = mod || ''
+    - path = path || './'
+    .logo-brand__wrap
+        img(src=`${path}assets/img/icons/logo-brand.png` width="100%" height="auto" alt="logo-brand-title" class=`logo-brand ${mod}` title="logo-brand")
+        
+//- btn mixin
+mixin btn(className, value, mod)
+    - mod = `btn--${mod}` || ''
+    .btn__wrap
+        button(type="button" value=value class=`btn btn-${className} ${mod}`)= value
+

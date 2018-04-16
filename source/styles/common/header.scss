@@ -1,0 +1,15 @@
+// header
+$header-bg: transparent;
+
+.header {
+    padding: 2rem 0;
+    background: $header-bg;
+    z-index: 100;
+
+    &.header-sticky {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+    }
+}

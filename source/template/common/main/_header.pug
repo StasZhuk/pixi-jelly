@@ -1,0 +1,15 @@
+-
+    var headerNav = {
+        "home": 'http://',
+        "features": 'http://',
+        "info": 'http://',
+        "screenshots": 'http://',
+        "blog": 'http://',
+        "press kit": 'http://'
+    }
+
+header.header.header-sticky
+    .container.container-flex
+        +logo-brand()
+        +nav('main', headerNav, '', 'right')
+        +btn('header', 'download', 'round')
