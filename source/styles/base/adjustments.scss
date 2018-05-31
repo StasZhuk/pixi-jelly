@@ -14,9 +14,12 @@ html {
 }
 
 body {
+    position: relative;
     font-size: 1.6rem;
     font-family: $main-font;
     background-color: $body-bg;
+    overflow: hidden;
+    
     @include desktop() {
         font-size: 1.5rem;
     }
