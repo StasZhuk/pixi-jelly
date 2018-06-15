@@ -1,15 +1,43 @@
--
-    var headerNav = {
-        "home": 'http://',
-        "features": 'http://',
-        "info": 'http://',
-        "screenshots": 'http://',
-        "blog": 'http://',
-        "press kit": 'http://'
-    }
-
-header.header.header-sticky
+header.header
     .container.container-flex
         +logo-brand()
-        +nav('main', headerNav, '', 'right')
-        +btn('header', 'download', 'round')
+        .header__info
+            .header__info-wrap.only-desktop
+                .info-line
+                    +icon('marker')
+                    .info-line__addres
+                        span г. Старый Оскол
+                        | , мкр. Жукова, 28 
+                .info-line
+                    +icon('marker')
+                    .info-line__addres
+                        span г. Белгород
+                        | , ул. Щорса 48а, 1 этаж 
+            .header__info-wrap
+                .info-line
+                    span офис
+                        .hidden-desktop Старый Оскол
+                    +icon('clock', 'hidden-phone')
+                    .info-line__time.hidden-phone
+                        .time-clock 9:00 - 18:00
+                        .time-days сб, вс - выходной
+                .info-line
+                    span офис
+                        .hidden-desktop Белгород
+                    +icon('clock', 'hidden-phone')
+                    .info-line__time.hidden-phone
+                        .time-clock 9:00 - 18:00
+                        .time-days сб, вс - выходной
+            .header__info-wrap
+                .info-line
+                    +icon('phone')
+                    a(href="#scroll-form").info-line__phone
+                        .phone +7(919)435-1137
+                        .phone-callback обратный звонок
+                .info-line
+                    +icon('phone')
+                    a(href="#scroll-form").info-line__phone
+                        .phone +7(910)737-2849
+                        .phone-callback обратный звонок
+
+                

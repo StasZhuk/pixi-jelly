@@ -1,0 +1,112 @@
+.footer {
+    background-color: #f1f1f1;
+    padding-top: 70px;
+    padding-bottom: 80px;
+    text-align: center;
+
+    @include xl() {
+        padding-top: 65px;
+        padding-bottom: 75px;
+    }
+
+    @include desktop() {
+        padding-top: 60px;
+        padding-bottom: 70px;
+    }
+
+    @include laptop() {
+        padding-top: 55px;
+        padding-bottom: 65px;
+    }
+
+    @include phone() {
+        padding-top: 50px;
+        padding-bottom: 60px;    }
+    
+    @include xsm() {
+        padding-top: 40px;
+        padding-bottom: 50px;
+    }
+
+    .copyright {
+        font-family: $main-font-b;
+        font-size: 3rem;
+        margin-bottom: 10px;
+
+        @include xl() {
+            font-size: 2.7rem;
+        }
+    
+        @include desktop() {
+            font-size: 2.4rem;
+        }
+    
+        @include laptop() {
+            font-size: 2.2rem;
+        }
+    
+        @include phone() {
+            font-size: 1.6rem;
+        }
+    
+        @include phone() {
+            font-size: 1.4rem;
+        }
+        
+        @include xsm() {
+            font-size: 1.3rem;
+        }
+
+        &__descr {
+            font-size: 1.6rem;
+
+            @include desktop() {
+                font-size: 1.5rem;
+            }
+        
+            @include laptop() {
+                font-size: 1.4rem;
+            }
+        
+            @include phone() {
+                font-size: 1.3rem;
+            }
+        
+            @include phone() {
+                font-size: 1.2rem;
+            }
+            
+            @include xsm() {
+               font-size: 1.1rem;
+            }
+        }
+    }
+
+    &__content {
+        display: inline-block;
+        position: relative;
+    }
+
+    .btn-top {
+        display: inline-block;
+        position: absolute;
+        text-transform: uppercase;
+        right: 100%;
+        margin-right: 10%;
+        padding: 15px 30px;
+        top: 50%;
+        transform: translateY(-50%);
+        border: 2px solid #000;
+        border-radius: 15px;
+
+        @include laptop() {
+            position: relative;
+            right: unset;
+            margin-right: 0;
+            padding: 15px 30px;
+            top: unset;
+            transform: unset;
+            margin-bottom: 30px;
+        }
+    }
+}

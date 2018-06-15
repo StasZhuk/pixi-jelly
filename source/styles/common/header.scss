@@ -1,10 +1,14 @@
 // header
-$header-bg: transparent;
+$header-bg: #fff;
 
 .header {
     padding: 2rem 0;
     background: $header-bg;
     z-index: 100;
+
+    @include laptop() {
+        padding: 1.5rem 0;
+    }
 
     &.header-sticky {
         position: absolute;
@@ -12,4 +16,196 @@ $header-bg: transparent;
         right: 0;
         top: 0;
     }
+
+    &__info {
+        display: flex;
+        margin-right: 13%;
+
+
+        @include xl {
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        @include laptop {
+            margin: 0;
+        }
+
+        &-wrap {
+            display: flex;
+            margin-right: 45px;
+            flex-direction: column;
+            justify-content: center;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            @include xl {
+                margin-right: 20px;
+            }
+
+            @include phone() {
+                margin-right: 0px;
+            }
+        }
+
+    }
+}
+
+.info-line {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+
+    @include xl {
+        margin-bottom: 20px;
+    }
+
+    @include phone() {
+        margin-bottom: 10px;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    svg {
+        fill: $acsent;
+        max-height: 40px;
+        max-width: 40px;
+        margin-right: 10px;
+
+        @include xl {
+            max-height: 30px;
+            max-width: 30px;
+        }
+
+        @include laptop {
+            margin-right: 5px;
+            max-height: 20px;
+            max-width: 20px;
+        }
+    }
+
+    &__addres {
+        @include xl {
+            font-size: 1.8rem;
+        }
+
+        @include desktop {
+            font-size: 1.5rem;
+        }
+
+        span {
+            font-family: $main-font-b;
+        }
+    }
+
+    &__phone {
+        flex: 1;
+        text-align: right;
+        white-space: nowrap;
+
+        &:hover {
+            .phone-callback {
+                border-bottom-color: transparent;
+            }
+        }
+    }
+
+    & > span {
+        margin-right: 15px;
+
+        @include desktop() {
+            text-align: right;
+            min-width: 100px;
+
+            div {
+                font-family: $main-font-b;
+            }
+        }
+
+        @include laptop() {
+            margin-right: 5px;
+        }
+
+        @include phone() {
+            font-size: 1.3rem;
+        }
+
+        @include xsm() {
+            font-size: 1.1rem;
+            min-width: 82px;
+        }
+
+        
+    }
+
+    .phone {
+        font-family: $main-font-b;
+        font-size: 3rem;
+
+        @include xl {
+            font-size: 2.2rem;
+        }
+
+        @include laptop {
+            font-size: 1.7rem;
+        }
+
+        @include phone() {
+            font-size: 1.5rem;
+        }
+
+        @include xsm() {
+            font-size: 1.4rem;
+        }
+    }
+}
+
+.time-clock {
+    font-size: 2.4rem;
+
+    @include xl {
+        font-size: 2rem;
+    }
+
+    @include laptop {
+        font-size: 1.6rem;
+    }
+}
+
+.time-days {
+    font-size: 1.6rem;
+
+    @include desktop {
+        font-size: 1.5rem;
+    }
+
+    @include laptop {
+        font-size: 1.3rem;
+    }
+}
+
+.phone-callback {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 1.8rem;
+    border-bottom: 1px dashed #000;
+    transition: border-color 0.3s;
+
+    @include xl {
+        font-size: 1.5rem;
+    }
+
+    @include laptop() {
+        font-size: 1.3rem;
+    }
+
+    @include phone() {
+        font-size: 1.1rem;
+        margin-right: 5px;
+    }
+    
 }

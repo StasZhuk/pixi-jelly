@@ -17,14 +17,13 @@ mixin nav (className, items, activeItem, mod)
 mixin icon(name, mod)
     - mod = mod || ''
     svg(class="icon icon-" + name + ' ' + mod)
-        use(xlink:href="/assets/img/sprite/sprite.svg#" + name)
+        use(xlink:href="./assets/img/sprite/sprite.svg#" + name)
 
 //- logo mixin
-mixin logo-brand(mod, path)
+mixin logo-brand(mod)
     - mod = mod || ''
-    - path = path || './'
     .logo-brand__wrap
-        img(src=`${path}assets/img/icons/logo-brand.png` width="100%" height="auto" alt="logo-brand-title" class=`logo-brand ${mod}` title="logo-brand")
+        img(src=`./assets/img/icons/logo-brand.png` width="100%" height="auto" alt="logo-brand-title" class=`logo-brand ${mod}` title="logo-brand")
         
 //- btn mixin
 mixin btn(className, value, mod)

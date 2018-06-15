@@ -1,0 +1,198 @@
+.features {
+    padding-top: 70px;
+    padding-bottom: 10px;
+    background:#f1f1f1;
+    border-bottom: 1px solid $acsent;
+
+    @include laptop {
+        padding-top: 50px;
+    }
+
+    .section-heading {
+        margin-bottom: 120px;
+
+        @include xl {
+            margin-bottom: 90px;
+        }
+
+        @include desktop {
+            margin-bottom: 70px;
+        }
+
+        @include laptop {
+            margin-bottom: 50px;
+        }
+    }
+
+    &-list {
+        @include desktop {
+            justify-content: center
+        }
+    }
+
+    &-item {
+        width: 33.33%;
+        margin-bottom: 70px;
+
+        @include xl {
+            margin-bottom: 50px;
+        }
+
+        @include desktop {
+            width: 45%;
+            margin-bottom: 30px;
+            display: flex;
+        }
+
+        @include laptop {
+            min-width: 400px;
+            width: 40%;
+            margin-bottom: 25px;
+        }
+
+        @include phone {
+            min-width: unset;
+            width: 265px;
+        }
+
+        &__content {
+            display: flex;
+            align-items: flex-start;
+            font-family: $main-font-b;
+            text-transform: uppercase;
+        }
+
+        &__img {
+            max-width: 150px;
+            width: initial;
+            height: auto;
+            margin-top: 5px;
+            background: no-repeat center/contain;
+
+            @include xl {
+                max-width: 90px;
+            }
+
+            @include laptop {
+                max-width: 60px;
+            }
+
+            @include phone {
+                max-width: 40px;
+            }
+        }
+
+        &__descr {
+            margin-left: 3rem;
+            max-width: 360px;
+
+            @include xl {
+                margin-left: 2rem;
+            }
+
+            @include laptop {
+                margin-left: 1.5rem;
+            }
+
+            @include phone {
+                margin-left: 1rem;
+            }
+        }
+
+        &__title {
+            font-size: 3rem;
+            line-height: 5rem;
+            letter-spacing: -2px;      
+            max-width: 320px;    
+            
+            @include xl {
+                font-size: 2.4rem;
+                line-height: 3.2rem;
+                letter-spacing: -1px;      
+            }
+            
+            @include laptop {
+                font-size: 2.1rem;
+                line-height: 2.8rem;
+                letter-spacing: 0px;
+            }
+            
+            @include phone {
+                font-size: 1.8rem;
+                line-height: 2.4rem;
+            }
+        }
+
+        &__text {
+            font-size: 2.1rem;
+            line-height: 3.3rem;
+            padding-right: 20px;
+
+            @include xl {
+                font-size: 1.8rem;
+                line-height: 2.9rem;
+                padding-right: 20px;     
+            }
+
+            @include laptop {
+                font-size: 1.5rem;
+                line-height: 2rem;
+                padding-right: 20px;     
+            }
+
+            @include phone {
+                font-size: 1.5rem;
+                padding-right: 0;     
+            }
+        }
+
+        &:nth-child(3) .features-item__text {
+            max-width: 250px;
+        }
+
+        &:nth-child(5) .features-item__text {
+            @include desktop {
+                padding-right: 80px;     
+            }
+
+            @include laptop {
+                padding-right: 100px;     
+            }
+
+            @include phone {
+                padding-right: 0px;     
+            }
+        }
+
+        &:nth-child(2) .features-item__title {
+            @include xl {
+                padding-right: 30px;     
+            }
+
+            @include desktop {
+                padding-right: 50px;     
+            }
+
+            @include laptop {
+                padding-right: 0px;     
+            }
+        }
+
+        &:nth-child(5) .features-item__content {
+            padding-left: 30px;
+
+            @include xl {
+                padding-left: 0;   
+            }
+        }
+
+        &:nth-child(odd) {
+            @include desktop {
+                margin-left: 7%;   
+            }
+            @include laptop {
+                margin-left: 0;   
+            }
+        }
+    }
+}

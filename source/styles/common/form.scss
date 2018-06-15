@@ -1,0 +1,155 @@
+
+.form {
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: transparent;
+    max-width: 680px;
+    margin: 0 auto;
+    
+    .form__heading {
+        font-size: 5.2rem;
+        text-align: center;
+        font-family: $main-font-b;
+        margin-bottom: 15px;
+
+        @include xl {
+            font-size: 4rem;
+            margin-bottom: 5px;
+        }
+
+        @include desktop {
+            font-size: 3rem;
+            margin-bottom: 5px;
+        }
+
+        @include laptop {
+            font-size: 4rem;
+            margin-bottom: 5px;
+        }
+
+        @include phone {
+            font-size: 3rem;
+        }
+    }
+    
+    .form__subtitle {
+        font-size: 1.9rem;
+        text-align: center;
+        margin-bottom: 20px;
+
+        span {
+            font-family: $main-font-b;
+        }
+
+        @include xl {
+            font-size: 1.35rem;
+            line-height: 1.2;
+        }
+
+        @include desktop {
+            font-size: 1.15rem;
+        }
+
+        @include laptop {
+            font-size: 1.4rem;
+        }
+
+        @include phone {
+            font-size: 1.3rem;
+        }
+    }
+}
+
+.form-line {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    .input-wrap:last-child {
+        margin-right: 0;
+    }
+
+    @include phone {
+        flex-direction: column;
+        margin-bottom: 0;
+
+        .input-wrap {
+            margin-bottom: 20px;
+        }
+        .input-wrap:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.input-wrap {
+    width: 46%;
+    position: relative;
+    box-shadow: 0 0 10px 5px rgba(#000, 0.1);
+
+    @include phone {
+        width: 100%;
+    }
+}
+
+.label {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    color: rgba(#000, 0.7);
+
+    @include xl {
+        font-size: 1.6rem;
+    }
+
+    span {
+        padding-left: 10px;
+    }
+}
+
+input {
+    padding: 10px;
+    font-family: $main-font;    
+}
+
+.btn__wrap {
+    display: block;
+    text-align: center;
+}
+
+input[type="text"], 
+input[type="tel"] { 
+    width: 100%;
+
+    @include xl {
+        font-size: 1.6rem;
+    }
+}
+
+input[type="submit"] {
+    padding: 15px 80px;
+    font-weight: normal;
+    background-color: $acsent;
+    color: #fff;
+    font-size: 2.7rem;
+    box-shadow: 0 0 80px 0 rgba(#1e6310, 1);
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+        background-color: darken($acsent, 10%);
+    }
+
+    @include xl {
+        font-size: 2.2rem;
+        text-transform: uppercase;
+    }
+}

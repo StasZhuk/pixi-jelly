@@ -3,7 +3,8 @@ $containerMaxWidth: 1200px;
 
 
 // fonts
-$main-font: "robotoregular", sans-serif;
+$main-font: "GilroyLight", sans-serif;
+$main-font-b: "GilroyExtraBold", sans-serif;
 
 // text-size
 $fs-main: 1.6rem;
@@ -13,7 +14,7 @@ $fs-heading-main: 2.6rem;
 
 
 // colors
-$acsent: #1eb858;
+$acsent: #36ab1e;
 $acsent-sec: #404040;
 
 // main elements colors
@@ -24,11 +25,12 @@ $body-bg: #fff;
 $header-bg: #1f1f1f; 
 
 // text-color
-$text-color_main: #474b57;
+$text-color_main:#000;
+;
 
 // LOGO
-$logo-width: 100px;
-$logo-height: 51px;
+$logo-width: 188px;
+$logo-height: 93px;
 
 // BTN
 $btn-c: $acsent;
