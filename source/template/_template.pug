@@ -6,10 +6,12 @@ html(lang="ru-RU")
   include common/main/_generals
 
   body
-      #scroll-top
       include ./common/main/_header
       
       //- основной контент
       block content
 
       include ./common/main/_footer
+
+      script(src='./assets/js/foundation.js' defer)
+      script(src='./assets/js/' + url_js defer)
