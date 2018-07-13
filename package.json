@@ -1,6 +1,10 @@
 {
   "name": "loftschool-builder",
   "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
     "browser-sync": "^2.18.13",
     "clean-css": "^4.1.7",
     "del": "~3.0.0",
@@ -31,6 +35,7 @@
     "vinyl-buffer": "^1.0.0"
   },
   "dependencies": {
+    "babel-preset-es2015": "^6.24.1",
     "font-awesome": "^4.7.0",
     "gsap": "^2.0.1",
     "jquery": "~3.2.1",

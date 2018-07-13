@@ -3,6 +3,7 @@
 global.$ = {
   package: require('./package.json'),
   config: require('./gulp/config'),
+  babel: require('babel-register'),
   path: {
     source: './source',
     task: require('./gulp/paths/tasks.js'),

@@ -17,7 +17,16 @@ module.exports = function() {
                         $: 'jquery',
                         jQuery: 'jquery'
                     })
-                ]
+                ],
+                module: {
+                    rules: [{
+                      test: /\.js$/,
+                      exclude: /node_modules/,
+                      use: [{
+                        loader: 'babel-loader',
+                      }]
+                    }]
+                }
             }))
             .pipe($.gulp.dest($.config.root + '/assets/js'))
     })
